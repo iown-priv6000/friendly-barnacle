@@ -211,7 +211,7 @@ local ESPConfig = {
 
     
     HealthBar = {
-        Enabled = false,
+        Enabled = true,
         Position = "Left", 
         SideGap = 1,
         Width = 1,
@@ -222,7 +222,7 @@ local ESPConfig = {
         Font = "Smallest Pixel-7",
         TextSize = 9,
         Outline = {
-            Style = "None",
+            Style = "Full",
             Color = Color3.fromRGB(0, 0, 0),
         },
         Gradient = {
