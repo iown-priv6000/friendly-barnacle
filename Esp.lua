@@ -1,6 +1,6 @@
 --[[
-	sensory esp modded
-	authors: dacces, Gemini, OpenAI, Claude, Deepseek, zaitheskid
+	sensory esp
+	authors: dacces, Gemini, OpenAI, Claude, Deepseek
 
 	inspired by: 
 	https://v3rm.net/threads/chatgpt-esp-by-me.28629/#post-242437
@@ -172,12 +172,12 @@ end)
 
 local ESPConfig = {
     -- esp checks
-    Enabled = false,
+    Enabled = true,
     Keybind = {
         Enabled = false,
         Key = Enum.KeyCode.Insert,
     },
-    Players = false,
+    Players = true,
     LocalPlayer = false,
     LimitFPS = 70, -- Set to 0 to disable limit
     DynamicBoxes = true,
@@ -218,7 +218,7 @@ local ESPConfig = {
         Enabled = false,
         Position = "Left", -- "Left", "Right", "Top", "Bottom"
         SideGap = 2,
-        Width = 2,
+        Width = 1,
         ShowText = false,
         TextFollowBar = false,
         HideWhenFullHP = false,
@@ -496,7 +496,7 @@ local ESPConfig = {
                     Enabled = true,
                     Position = "Bottom",
                     SideGap = 2,
-                    Width = 2,
+                    Width = 1,
                     ShowText = true,
                     TextFollowBar = true,
                     HideWhenFullHP = false,
@@ -1675,7 +1675,7 @@ local UpdateESPObj = LPHNoVirtualize(function(espObj, position, size, name, dist
 
     local isFriendly = false
     if teamOwner and GetCfg("FriendlyIndicator.Enabled") then
-        if GetCfg("FriendlyIndicator.CheckTeam") and (teamOwner:GetAttribute("Team") == LocalPlayer:GetAttribute("Team")) then
+        if GetCfg("FriendlyIndicator.CheckTeam") and (false) then
             isFriendly = true
         end
         if not isFriendly and GetCfg("FriendlyIndicator.CheckFriends") then
