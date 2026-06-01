@@ -222,7 +222,7 @@ local ESPConfig = {
         Font = "Smallest Pixel-7",
         TextSize = 9,
         Outline = {
-            Style = "Full",
+            Style = "None",
             Color = Color3.fromRGB(0, 0, 0),
         },
         Gradient = {
