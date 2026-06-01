@@ -35,11 +35,13 @@ end
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
+while not Players.LocalPlayer do task.wait() end
 local CoreGui = game:GetService("CoreGui")
 local Workspace = game:GetService("Workspace")
 local HttpService = game:GetService("HttpService")
 local LocalPlayer = Players.LocalPlayer
-local Camera = Workspace.CurrentCamera
+local Camera = Workspace.CurrentCamera or Workspace:WaitForChild("Camera", 10) or Workspace.CurrentCamera
+while not Camera do task.wait() Camera = Workspace.CurrentCamera end
 local WtS = Camera.WorldToViewportPoint
 local UIContainer = gethui and gethui() or CoreGui
 local BootstrapPlayers = Players
